@@ -73,18 +73,13 @@ function renderProjs() {
 function onGetUrl(projId) {
   var project = getProjById(projId);
   var url = project.url;
-  window.open(
-    url,
-    "_blank" // <- This is what makes it open in a new window.
-  );
+  window.open(url, "_blank");
 }
+
 $(".contact-submit").on("click", function () {
   var subject = $("#mail-subject").val();
   var email = $("#user-email").val();
   var body = $("#message-body").val();
-  var url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su='${subject}'&body=${body}`
-  window.open(
-    url,
-    "_blank" // <- This is what makes it open in a new window.
-  );
+  var url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su='${subject}'&body=${body}`;
+  window.open(url, "_blank");
 });

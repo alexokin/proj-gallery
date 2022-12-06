@@ -81,7 +81,7 @@ $(".contact-submit").on("click", function () {
   var myEmail = 'alex.okin@gmail.com';
   var email = $("#user-email").val()
   var body = $("#message-body").val();
-  var url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su='${subject}'&body=&body=${body}&bcc='${myEmail}'`;
+  var url = `https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}&su=${subject}&body=${body}&bcc=${email}`;
 
   window.open(url, "_blank");
 });
